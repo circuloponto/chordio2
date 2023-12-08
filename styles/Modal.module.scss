@@ -1,0 +1,35 @@
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30vw;
+  height: 30vh;
+  /* border: 2px solid black; */
+  background: #f4bd07;
+  box-shadow: 10px 10px 1px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 10px;
+}
+.btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  background: none;
+  font-size: 30px;
+  margin: 10px;
+}
+.Label {
+  width: 20vw;
+}
+.loginBtn {
+  border: none;
+  padding: 20px;
+  background: #f44607;
+  border-radius: 10px;
+  box-shadow: 5px 5px 1px black;
+}
