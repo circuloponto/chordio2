@@ -121,11 +121,14 @@ export default function Home() {
       const parsedNotesSharp = parsedNotes
         .map((note, i) => {
           //console.log('note', note);
-          if (note[0].endsWith('#')) {
-            const index = matrixSharp.indexOf(note[0]);
-            note = matrixFlat[index];
-            console.log('index from parsedNotesSharp', index);
+          if (note !== null) {
+            if (note[0].endsWith('#')) {
+              const index = matrixSharp.indexOf(note[0]);
+              note = matrixFlat[index];
+              console.log('index from parsedNotesSharp', index);
+            }
           }
+
           return note;
         })
         .flat();
@@ -139,14 +142,22 @@ export default function Home() {
       console.log('parsedChord', parsedChord);
       const transposedRoots = parsedNotesSharp.map((note, i) => {
         //console.log('note', note);
-        const index = matrixFlat.indexOf(note);
-        console.log(
-          'index + transcribeInterval',
-          index + Number(transcribeInterval),
-          'index',
-          index
-        );
-        const newIndex = index + Number(transcribeInterval);
+        let index;
+        if (note !== null) {
+          index = matrixFlat.indexOf(note);
+        }
+
+        /*  console.log(
+           'index + transcribeInterval',
+           index + Number(transcribeInterval),
+           'index',
+           index
+         ); */
+        let newIndex: number = 0;
+        if (index !== undefined) {
+          newIndex = index + Number(transcribeInterval)
+        }
+
         let val =
           matrixFlat[
           ((newIndex % matrixFlat.length) + matrixFlat.length) %
