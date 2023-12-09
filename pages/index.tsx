@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 //import styles from '@/styles/Home.module.css'
 import styles from '../styles/Transposer.module.scss'
+
 import guitar from '../public/guitar.jpg'
 const inter = Inter({ subsets: ['latin'] })
 import AppContext from '@/components/AppContext'
