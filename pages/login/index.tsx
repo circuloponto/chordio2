@@ -8,15 +8,20 @@ import { useContext } from 'react'
 
 import { useRouter } from 'next/navigation'
 
-const LoginForm = ({ isUserLoggedIn }: boolean) => {
+const LoginForm = () => {
   const context = useContext(AppContext)
-  console.log('isUserLoggedIn', isUserLoggedIn)
+  interface subReq {
+    error: boolean,
+    isLoading: boolean,
+    submitted: boolean,
+    errorMessage: string,
+  }
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [submitRequest, setSubmitRequest] = useState({});
+  const [submitRequest, setSubmitRequest] = useState<subReq>();
   //const navigate = useNavigate();
   const router = useRouter()
-  const onRegisterSubmit = async (e) => {
+  const onRegisterSubmit = async (e: any) => {
     e.preventDefault();
 
     console.log('Login!!!');
