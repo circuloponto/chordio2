@@ -119,15 +119,15 @@ export default function Home() {
         return parsed;
       });
       const parsedNotesSharp = parsedNotes
-        .map((note, i) => {
+        .map((note: any) => {
           //console.log('note', note);
-          if (note !== null) {
-            if (note[0].endsWith('#')) {
-              const index = matrixSharp.indexOf(note[0]);
-              note = matrixFlat[index];
-              console.log('index from parsedNotesSharp', index);
-            }
+          //if (note !== null) {
+          if (note[0].endsWith('#')) {
+            const index = matrixSharp.indexOf(note[0]);
+            note = matrixFlat[index];
+            console.log('index from parsedNotesSharp', index);
           }
+          //}
 
           return note;
         })
