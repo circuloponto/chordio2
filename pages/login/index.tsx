@@ -18,7 +18,12 @@ const LoginForm = () => {
   }
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [submitRequest, setSubmitRequest] = useState<subReq>();
+  const [submitRequest, setSubmitRequest] = useState<subReq>({
+    error: false,
+    isLoading: false,
+    submitted: false,
+    errorMessage: ''
+  });
   //const navigate = useNavigate();
   const router = useRouter()
   const onRegisterSubmit = async (e: any) => {
