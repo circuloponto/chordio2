@@ -169,15 +169,14 @@ body {
   /*  */
 }
 
-// .container {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-//   width: 100vw;
-//   height: calc(100vh - 200px);
-
-// }
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: calc(100vh - 200px);
+}
 .title {
   /* position: absolute; */
   margin: 20px 0 0 0;
@@ -186,12 +185,12 @@ body {
   text-shadow: none;
   font-size: 20px;
 }
-/* .content {
+.content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-} */
+}
 
 /* text area */
 .inputcontainer {
