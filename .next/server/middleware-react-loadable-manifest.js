@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{}"
+self.__REACT_LOADABLE_MANIFEST="{\"savedchords/index.tsx -> ../../components/ChordSaved\":{\"id\":\"savedchords/index.tsx -> ../../components/ChordSaved\",\"files\":[\"static/chunks/components_ChordSaved_jsx.js\"]}}"
