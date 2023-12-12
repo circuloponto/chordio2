@@ -287,7 +287,7 @@ export default function Home() {
 
         {/* <h1>Context value: {context.nameContext}</h1>
         <button onClick={changeNameContext}>update context state</button> */}
-        <div className='container'>
+        <div className={styles.container}>
 
           <div className={styles.chords}>
 
